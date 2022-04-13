@@ -3,11 +3,12 @@ import DashBoardComponent from "./Components/DashBoardComponent";
 import EffectHook from "./Components/EffectHookEg";
 import LoginComponent from "./Components/LoginComponent"
 import UpdateProfile from "./Components/UpdateProfile";
-
+import Login from "./GoogleComponents/Login";
+import DashBoardGoogle from "./GoogleComponents/DashBoardGoogle";
 function App() {
   return (
     <div>
-      <Router>
+    { /* <Router>
       <nav>
         <Link to="/signin">Login</Link>
         
@@ -18,7 +19,16 @@ function App() {
         <Route path="/update" element={<UpdateProfile></UpdateProfile>}></Route>
       </Routes>
 
-      </Router>
+  </Router>*/}
+  <Router>
+  <nav>
+        <Link to="/signin">Login</Link>
+      </nav>
+      <Routes>
+        <Route path="/signin" element={<Login></Login>}></Route>
+        <Route path="/dashboard" element={<DashBoardGoogle></DashBoardGoogle>}></Route>
+      </Routes>
+  </Router>
     </div>
   );
 }
